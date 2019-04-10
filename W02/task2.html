@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>W02: task2</title>
+  </head>
+  <body>
+    <script src="task1.js"></script>
+    <script src="task2.js"></script>
+    <form>
+      <label for="textForm1">x0: </label>
+      <input type="number" id="textForm1">
+      
+      <label for="textForm2">y0: </label>
+      <input type="number" id="textForm2">
+      <label for="textForm3">z0: </label>
+      <input type="number" id="textForm3">
+      
+      <label for="textForm4">x1: </label>
+      <input type="number" id="textForm4">
+      <label for="textForm5">y1: </label>
+      <input type="number" id="textForm5">
+      
+      <label for="textForm6">z1: </label>
+      <input type="number" id="textForm6">
+      <label for="textForm7">x2: </label>
+      <input type="number" id="textForm7">
+      
+      <label for="textForm8">y2: </label>
+      <input type="number" id="textForm8">
+      <label for="textForm9">z2: </label>
+      <input type="number" id="textForm9">
+
+      <button id="button">結果</button>
+      <input type="text" id="resultForm">
+      	
+    </form>
+  </body>
+
+  <script>
+    var button = document.getElementById("button");
+    button.addEventListener("click", function(e)
+    {
+    e.preventDefault();
+    var x0 = document.getElementById("textForm1").value;
+    var y0 = document.getElementById("textForm2").value;
+    var z0 = document.getElementById("textForm3").value;
+    var x1 = document.getElementById("textForm4").value;
+    var y1 = document.getElementById("textForm5").value;
+    var z1 = document.getElementById("textForm6").value;
+    var x2 = document.getElementById("textForm7").value;
+    var y2 = document.getElementById("textForm8").value;
+    var z2 = document.getElementById("textForm9").value;
+    
+    var v0 = new Vec3( x0, y0, z0 );
+    var v1 = new Vec3( x1, y1, z1 );
+    var v2 = new Vec3( x2, y2, z2 );
+    
+    
+    var S = AreaOfTriangle( v0, v1, v2 );
+
+    var resultForm = document.getElementById("resultForm");
+    resultForm.value = S;
+    });
+  </script>
+</html>
