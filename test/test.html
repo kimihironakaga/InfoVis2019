@@ -1,0 +1,43 @@
+<html>
+    <head>
+	<title>Wfinal: Final Task </title>
+    <script language="JavaScript">
+    
+    function Add(){
+        var c = document.getElementById("A") + document.getElementById("B");
+        
+        var resultForm = document.getElementById("C");
+        resultForm.value = c;
+        
+        
+    }
+        
+    
+    
+    
+    </script>
+    </head>
+    <body style="margin:0">
+    <div id="display" style="width: 80%; float: left;"></div>
+    <div id="controller" style="width:20%; float:left;">
+        <input size="20" type="text" name="A">+
+        <input size="20" type="text" name="B">
+        <input type="button" value="=" onclick="Add()">
+        <input size="20" type="text" name="C">
+        <button id="change-color-button" style="font-family=Arial;" onclick="change_color()">Apply</button>
+    </div>
+	<script src="three.min.js"></script>
+	<script src="TrackballControls.js"></script>
+	<script src="https://threejs.org/examples/js/math/Lut.js"></script>
+	<script src="https://naohisas.github.io/KVS.js/Build/KVS.min.js"></script>
+	<script src="https://naohisas.github.io/KVS.js/Build/KVS2THREE.min.js"></script>
+	<script src="https://naohisas.github.io/KVS.js/Source/KVSLobsterData.js"></script>
+	<script src="Bounds.js"></script>
+	<script src="Isosurfaces1.js"></script>
+	<script src="main_task1.js"></script>
+	
+    
+      
+    
+    </body>
+</html>
